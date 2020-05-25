@@ -7,10 +7,11 @@ import random
 from random import seed
 from random import randrange
 from math import exp
+import numpy as np
 #import matplotlib.pyplot as plt
 
 #VALUES USED FOR ALGORITHM
-nfolds = 3
+nfolds = 4
 lrnrate =.001
 numepoch = 500
 #Dataset
@@ -236,7 +237,7 @@ def model_evaluation(dataset, algorithm, nfolds, *args):
 		accpercentage.append(accuracy)
 	return accpercentage
 
-
+np.random.shuffle(dataset)
 seed(1)
 accpercentage = model_evaluation(dataset, fitting_method, nfolds, lrnrate, numepoch)
 #print('accpercentage: %s' % accpercentage)
