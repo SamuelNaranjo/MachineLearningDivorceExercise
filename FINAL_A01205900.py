@@ -12,7 +12,7 @@ from math import exp
 #VALUES USED FOR ALGORITHM
 nfolds = 3
 lrnrate =.001
-numepoch = 100
+numepoch = 500
 #Dataset
 dataset = [[2,2,4,1,0,0,0,0,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,2,1,2,0,1,2,1,3,3,2,1,1,2,3,2,1,3,3,3,2,3,2,1,1],
            [4,4,4,4,4,0,0,4,4,4,4,3,4,0,4,4,4,4,3,2,1,1,0,2,2,1,2,0,1,1,0,4,2,3,0,2,3,4,2,4,2,2,3,4,2,2,2,3,4,4,4,4,2,2,1],
@@ -166,7 +166,7 @@ dataset = [[2,2,4,1,0,0,0,0,0,0,1,0,1,1,0,1,0,0,0,1,0,0,0,0,0,0,0,0,0,1,1,2,1,2,
            [0,0,0,0,0,0,0,1,0,0,0,1,1,1,0,0,0,0,0,1,1,0,1,1,0,0,0,0,0,0,1,3,0,0,0,0,0,0,0,0,0,2,2,0,1,3,4,4,0,1,3,3,3,1,0],
            ]
 #PREPARING THE DATA 
-# SPLITING DATA IN K FOLDS (BOOK PAGE: )
+# SPLITING DATA IN K FOLDS (BOOK PAGE: 99)
 def model_validation(dataset, nfolds):
 	dataset_split = list()
 	dataset_copy = list(dataset)
