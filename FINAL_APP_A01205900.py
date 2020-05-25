@@ -11,7 +11,7 @@ root.geometry("650x800")
 
 frame = LabelFrame(root,text='Instructions',padx=10,pady=10)
 frame.pack(padx=10,pady=10)
-Label(frame,text='PLEASE READ THE INSTRUCTIONS VERY CAREFULLY').pack()
+Label(frame,text='PLEASE READ THE INSTRUCTIONS VERY CAREFULLY',fg='red').pack()
 Label(frame,text='Answer the following 54 questions using a scale of numbers from 0 to 4').pack()
 Label(frame,text='"0" being I TOTALLY DISAGREE and "4 being I TOTALLY AGREE"').pack()
 Label(frame,text='Insert your answers in the space below WITHOUT ANY SPACES then click "GET RESULTS" button').pack()
@@ -87,11 +87,11 @@ def start():
         
 def exitest():
     root.destroy()
-sbutton = Button(root,text="START TEST",command=start).pack(pady=10)
+sbutton = Button(root,text="START TEST",command=start,fg='green',padx=5,pady=5).pack(pady=10)
 
 
     
-e = Entry(root,width=54)
+e = Entry(root,width=54,borderwidth=5)
 e.pack()  
 global result
 #global data
@@ -143,8 +143,8 @@ def next():
 
 #finish=Button(root,text='END',command = finisht).pack()
 
-nextb = Button(root,text="GET RESULTS",command = next).pack()
-exitbutton=Button(root,text='EXIT',command = exitest).pack()
+nextb = Button(root,text="GET RESULTS",command = next,padx=5,pady=5).pack()
+exitbutton=Button(root,text='EXIT',command = exitest,fg='red',padx=5,pady=5).pack()
 
 #messagebox.showinfo('Instructions','PLEASE READ THE INSTRUCTIONS VERY CAREFULLY\n\nAnswer the following 54 questions using a scale of numbers from 0 to 4\n"0" being I TOTALLY DISAGREE and "4 being I TOTALLY AGREE"\nInsert your answers in the space below WITHOUT ANY SPACES then click "GET RESULTS" button\nExample of how your answer MUST be written: 000122341110000212330011\nPlease make sure you write all 54 numbers to get an accurate result')
 
